@@ -1,0 +1,8 @@
+#ignore all .log files
+*.log
+
+#ignore all .root files
+*.root
+
+#ignore all .slcio files
+*.slcio

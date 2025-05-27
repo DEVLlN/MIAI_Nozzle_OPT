@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<marlin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ilcsoft.desy.de/marlin/marlin.xsd">
+
+  <constants>
+  </constants>
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == List of processors to execute                                                                      == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <execute>
+
+    <!-- ==========  Setup  ========== -->
+    <processor name="EventNumber" />
+
+    <!-- ==========  Geometry initialization  ========== -->
+    <processor name="InitDD4hep_mod4"/>
+
+    <!-- ==========  Overlay  ========== -->
+    <processor name="OverlayBIB"/>
+
+    <!-- ==========  Output  ========== -->
+    <processor name="Output_DST"/>
+
+  </execute>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Global setup                                                                                       == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="EventNumber" type="Statusmonitor">
+    <parameter name="HowOften" type="int">1 </parameter>
+    <parameter name="Verbosity" type="string"> MESSAGE </parameter>
+  </processor>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Input configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <global>
+    <parameter name="LCIOInputFiles">
+      pgun_dummy.slcio
+    </parameter>
+    <!-- Limit the number of processed records (run+evt): -->
+    <parameter name="MaxRecordNumber" value="-1" />
+    <parameter name="SkipNEvents" value="0" />
+    <parameter name="SupressCheck" value="false" />
+    <parameter name="Verbosity" options="DEBUG0-9,MESSAGE0-9,WARNING0-9,ERROR0-9,SILENT">MESSAGE0 </parameter>
+    <parameter name="RandomSeed" value="1234567890" />
+  </global>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Output configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="Output_DST" type="LCIOOutputProcessor">
+    <!--   standard output: full reconstruction keep all collections -->
+    <parameter name="LCIOOutputFile" type="string"> sim-1e3x500-26m-lowth-excl_c00_trimmed.slcio </parameter>
+    <parameter name="LCIOWriteMode" type="string" value="WRITE_NEW"/>
+    <!-- <parameter name="SplitFileSizekB" type="int">996147 </parameter> -->
+    <parameter name="Verbosity" type="string">WARNING </parameter>
+    <parameter name="DropCollectionNames" type="StringVec">  </parameter>
+    <parameter name="DropCollectionTypes" type="StringVec">
+      LCRelation
+      MCParticle
+    </parameter>
+    <parameter name="KeepCollectionNames" type="StringVec">  </parameter>
+  </processor>
+
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == DD4hep configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="InitDD4hep_mod4" type="InitializeDD4hep">
+    <!--InitializeDD4hep reads a compact xml file and initializes the dd4hep::Detector object-->
+    <!--Name of the DD4hep compact xml file to load-->
+    <parameter name="DD4hepXMLFile" type="string">
+      /scratch/devlinjenkins/work/simulation/geometries/MuColl_10TeV_v0A_mod/MuColl_10TeV.xml
+    </parameter>
+    <!--Alternate name for EncodingStringParameterName-->
+    <!--If given, the Compact File parameter of that name will be used as argument to LCTrackerCellID::set_encoding_string()-->
+    <parameter name="EncodingStringParameterName" type="string"> GlobalTrackerReadoutID  </parameter>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <!--parameter name="Verbosity" type="string">DEBUG </parameter-->
+  </processor>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == LCTuple configuration                                                                              == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Overlay configuration                                                                              == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <group name="Overlay">
+    <parameter name="MCParticleCollectionName" type="string">MCParticle </parameter>
+    <!--The output MC Particle Collection Name for the physics event-->
+    <parameter name="MCPhysicsParticleCollectionName" type="string"> MCPhysicsParticles </parameter>
+    <!--Time difference between bunches in the bunch train in ns-->
+    <parameter name="Delta_t" type="float" value="1"/>
+    <!--Number of bunches in a bunch train-->
+    <parameter name="NBunchtrain" type="int" value="1"/>
+    <!--Whether MCParticle collections should be merged (slow with BIB) -->
+    <parameter name="MergeMCParticles" type="bool" value="true"/>
+
+
+    <parameter name="Collection_IntegrationTimes" type="StringVec" >
+
+      VertexBarrelCollection -0.18 0.24
+      VertexEndcapCollection -0.18 0.24
+
+      InnerTrackerBarrelCollection -0.36 0.48
+      InnerTrackerEndcapCollection -0.36 0.48
+
+      OuterTrackerBarrelCollection -0.36 0.48
+      OuterTrackerEndcapCollection -0.36 0.48
+
+      ECalBarrelCollection -0.25 10.
+      ECalEndcapCollection -0.25 10.
+      ECalPlugCollection -0.25 10.
+
+      HCalBarrelCollection -0.25 10.
+      HCalEndcapCollection -0.25 10.
+      HCalRingCollection -0.25 10.
+
+      YokeBarrelCollection -0.25 10.
+      YokeEndcapCollection -0.25 10.
+
+    </parameter>
+
+    <!--Number of the Bunch crossing of the physics event-->
+    <parameter name="PhysicsBX" type="int" value="1"/>
+    <!--Draw random number of Events to overlay from Poisson distribution with  mean value NumberBackground-->
+    <parameter name="Poisson_random_NOverlay" type="bool" value="false"/>
+    <!--Place the physics event at an random position in the train - overrides PhysicsBX-->
+    <parameter name="RandomBx" type="bool" value="false"/>
+    <!--[mm/ns] (float) - default 5.0e-2 (5cm/us)-->
+    <parameter name="TPCDriftvelocity" type="float" value="0.05"/>
+    <parameter name="BackgroundFileNames" type="StringVec"> </parameter>
+
+    <processor name="OverlayBIB" type="OverlayTimingGeneric">
+      <parameter name="BackgroundFileNames" type="StringVec">
+        /data/samples/MuCollv1_25ns_nEkin150MeV_QGSPBERT_merged/sim-1e3x500-26m-lowth-excl_c00.slcio
+      </parameter>
+      <parameter name="StartBackgroundFileIndex" type="int" value="0"/>
+      <parameter name="AllowReusingBackgroundFiles" type="bool" value="true" />
+      <parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT">MESSAGE </parameter>
+      <parameter name="NBunchtrain" type="int" value="1" />
+      <parameter name="NumberBackground" type="float" value="1499" />
+    </processor>
+
+  </group>
+
+
+</marlin>
