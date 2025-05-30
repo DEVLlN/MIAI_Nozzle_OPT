@@ -6,7 +6,7 @@ from g4units import mm, GeV, MeV, m, deg
 SIM = DD4hepSimulation()
 
 ## The compact XML file
-SIM.compactFile = "/scratch/devlinjenkins/work/simulation/geometries/MuColl_10TeV_v0A_mod/MuColl_10TeV1_10_FULL.xml"
+SIM.compactFile = "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MuColl_10TeV_v0A_Modded_Nozzle/MuColl_10TeV_Hammer_V1.xml"
 
 ## Lorentz boost for the crossing angle, in radian!
 SIM.crossingAngleBoost = 0.0
@@ -22,7 +22,7 @@ SIM.macroFile = ""
 ## number of events to simulate, used in batch mode. -1 all
 SIM.numberOfEvents = 100
 ## Outputfile from the simulation,only lcio output is supported
-SIM.outputFile = "mumu_H_bb_100E_TIP_KZv1_10_FULL.slcio"
+SIM.outputFile = "mumu_H_bb_100E_TIP_KZv1_4_Hammer.slcio"
 
 ## Verbosity use integers from 1(most) to 7(least) verbose
 ## or strings: VERBOSE, DEBUG, INFO, WARNING, ERROR, FATAL, ALWAYS

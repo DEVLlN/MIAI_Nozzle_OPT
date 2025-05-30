@@ -8,29 +8,21 @@ max_events = -1
 
 # Gather input files
 fnames = [
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/noTrackLimit/mumu_H_bb_100E.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_1/mumu_H_bb_100E_TIP_KZv1_1.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_3/mumu_H_bb_100E_FULL_KZv1_3_FULL.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_5/mumu_H_bb_100E_FULL_KZv1_5_FULL.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_7/mumu_H_bb_100E_full_KZv1_7_FULL.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_9/mumu_H_bb_100E_FULL_KZv1_9_FULL.slcio",
-    "/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_10/mumu_H_bb_100E_BLACKHOLE_NOZZLE.slcio"
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/NoBlackhole/mumu_H_bb_100E.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/Hammer_V1/mumu_H_bb_100E_TIP_KZ_Hammer.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/full_BH/mumu_H_bb_100E_BLACKHOLE_NOZZLE.slcio"
 ]
 
 # Descriptive names for each file
 descriptive_names = [
     "Default Geometry",
-    "Blackhole 2cm deep",
-    "Blackhole 4cm deep",
-    "Blackhole 6cm deep",
-    "Blackhole 8cm deep",
-    "Blackhole 10cm deep",
+    "Hammer Blackhole",
     "Full Nozzle Blackhole"
 ]
 
 # Set up histograms
 hists = {}
-colors = [ROOT.kOrange, ROOT.kOrange-3, ROOT.kGreen+2, ROOT.kTeal, ROOT.kAzure+7, ROOT.kBlue+1, ROOT.kGray+3]
+colors = [ROOT.kRed, ROOT.kGreen+1, ROOT.kBlue+1]
 
 # Loop over files to create histograms
 for idx, f in enumerate(fnames):
@@ -100,7 +92,7 @@ legend.Draw()
 
 # Add title to the canvas
 title = ROOT.TPaveText(0.2, 0.92, 0.8, 0.98, "NDC")
-title.AddText("MCParticle Position Theta at Different Nozzle Blackhole Radii")
+title.AddText("MCParticle Position Theta at Different Nozzle Blackholes")
 title.SetFillColor(0)
 title.SetBorderSize(0)
 title.SetFillColor(0)

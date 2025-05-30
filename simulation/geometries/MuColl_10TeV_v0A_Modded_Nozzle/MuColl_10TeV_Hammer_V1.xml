@@ -194,7 +194,7 @@
     <include ref="${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml"/>
 
 	<include ref="Beampipe_o1_v01_02.xml"/>
-	<include ref="Nozzle_10deg_8cm.xml"/>  <!-- Nozzle.xml, replace with current version before sim-->
+	<include ref="Nozzle_10deg_Hammer_V1.xml"/>  <!-- Nozzle.xml, replace with current version before sim-->
 
 	<include ref="Vertex_o2_v06_01.xml"/>
 	<include ref="InnerTracker_o2_v06_01.xml"/>

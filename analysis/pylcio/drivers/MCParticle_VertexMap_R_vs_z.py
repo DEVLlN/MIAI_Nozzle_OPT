@@ -7,11 +7,11 @@ import math
 max_events = -1
 
 # Gather input files
-fnames = glob.glob("/scratch/devlinjenkins/work/simulation/mumu_H_bb_100Events/full_KZ_v1_3/mumu_H_bb_100E_FULL_KZv1_3_FULL.slcio")
+fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/Hammer_V1/mumu_H_bb_100E_TIP_KZ_Hammer.slcio")
 
 # Set up histograms
 hists = {}
-hists["MCParticle_VertexMap_R_vs_Z_full_v1_3"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_full_v1_3", "MCParticle Vertex Map R vs Z 4cm Deep Blackhole Volume", 50, -2600, 2600, 50, 0, 400)
+hists["MCParticle_VertexMap_R_vs_Z_Hammer"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_Hammer", "MCParticle Vertex Map R vs Z Hammer", 50, -2600, 2600, 50, 0, 400)
 
 # Loop over events
 event_count = 0
@@ -33,7 +33,7 @@ for f in fnames:
             vertex = p.getVertex()
             x, y, z = vertex[0], vertex[1], vertex[2]
             radius = math.sqrt(x**2 + y**2)
-            hists["MCParticle_VertexMap_R_vs_Z_full_v1_3"].Fill(z, radius)
+            hists["MCParticle_VertexMap_R_vs_Z_Hammer"].Fill(z, radius)
 
         event_count += 1
 
