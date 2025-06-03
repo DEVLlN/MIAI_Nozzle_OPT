@@ -1,0 +1,62 @@
+<lccdd>
+  <define>
+    <constant name="Nozzle_kink_z" value="100*cm"/>
+  </define>
+  <display>
+    <vis name="NozzleWVis" alpha="1.0" r="0.0" g="1.0" b="1.0" showDaughters="false" visible="true"/>
+    <vis name="NozzleKillZoneVis" alpha="1.0" r="1.0" g="1.0" b="1.0" showDaughters="false" visible="true"/>
+    <vis name="NozzleBCHVis" alpha="0.3" r="1.0" g="1.0" b="1.0" showDaughters="false" visible="false"/>
+  </display>
+  <detectors>
+    
+<detector name="NozzleKillZone_right" type="DD4hep_PolyconeSupport" vis="NozzleKillZoneVis" region="NozzleRegion" limits="NozzleRegionLimitSet">
+  <material name="Tungsten"/>
+  <zplane z="246.00*cm" rmin="0.3*cm" rmax="0.60000*cm"/>
+  <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="0.30000*cm"/>
+  <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="0.30000*cm"/>
+  <zplane z="200*cm" rmin="0.596*cm" rmax="0.30000*cm"/>
+  <zplane z="600*cm" rmin="1.78*cm" rmax="30.51717*cm"/>
+</detector>
+<detector name="NozzleKillZone_left" type="DD4hep_PolyconeSupport" vis="NozzleKillZoneVis" region="NozzleRegion" limits="NozzleRegionLimitSet">
+  <material name="Tungsten"/>
+  <zplane z="-246.00*cm" rmin="0.3*cm" rmax="0.60000*cm"/>
+  <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="0.30000*cm"/>
+  <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="0.30000*cm"/>
+  <zplane z="-200*cm" rmin="0.596*cm" rmax="0.30000*cm"/>
+  <zplane z="-600*cm" rmin="1.78*cm" rmax="30.51717*cm"/>
+</detector>
+
+    
+<detector name="NozzleW_right" type="DD4hep_PolyconeSupport" vis="NozzleWVis" region="NozzleRegion">
+  <material name="Tungsten"/>
+  <zplane z="6.00*cm" rmin="0.60000*cm" rmax="2.59223*cm"/>
+  <zplane z="Nozzle_kink_z" rmin="0.60000*cm" rmax="17.63*cm"/>
+  <zplane z="Nozzle_kink_z" rmin="0.60000*cm" rmax="15*cm"/>
+  <zplane z="200*cm" rmin="0.60000*cm" rmax="17*cm"/>
+  <zplane z="600*cm" rmin="0.60000*cm" rmax="50*cm"/>
+</detector>
+<detector name="NozzleW_left" type="DD4hep_PolyconeSupport" vis="NozzleWVis" region="NozzleRegion">
+  <material name="Tungsten"/>
+  <zplane z="-6.00*cm" rmin="0.60000*cm" rmax="2.59223*cm"/>
+  <zplane z="-Nozzle_kink_z" rmin="0.60000*cm" rmax="17.63*cm"/>
+  <zplane z="-Nozzle_kink_z" rmin="0.60000*cm" rmax="15*cm"/>
+  <zplane z="-200*cm" rmin="0.60000*cm" rmax="17*cm"/>
+  <zplane z="-600*cm" rmin="0.60000*cm" rmax="50*cm"/>
+</detector>
+
+    
+<detector name="NozzleBCH_right" type="DD4hep_PolyconeSupport" vis="NozzleBCHVis" region="NozzleRegion">
+  <material name="BCH2"/>
+  <zplane z="Nozzle_kink_z" rmin="15*cm" rmax="17.63*cm" />
+  <zplane z="200*cm" rmin="17*cm" rmax="26.104*cm" />
+  <zplane z="Nozzle_zmax" rmin="50*cm" rmax="60*cm" />
+</detector>
+<detector name="NozzleBCH_left" type="DD4hep_PolyconeSupport" vis="NozzleBCHVis" region="NozzleRegion">
+  <material name="BCH2"/>
+  <zplane z="-Nozzle_kink_z" rmin="15*cm" rmax="17.63*cm" />
+  <zplane z="-200*cm" rmin="17*cm" rmax="26.104*cm" />
+  <zplane z="-Nozzle_zmax" rmin="50*cm" rmax="60*cm" />
+</detector>
+
+  </detectors>
+</lccdd>

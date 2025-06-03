@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 # Sample data
 simulation_versions = ["Default", "2cm depth", "4cm depth", "6cm depth", "8cm depth", "10cm depth", "Blackhole Nozzle"]
-file_sizes = [258.08, 251.74, 243.21, 255.06, 257.21, 252.87, 242.03]  # time in mb
+file_sizes = [258.08, 251.74, 243.21, 255.06, 257.21, 252.87, 242.03]  # mb
 
 # Colors for each bar
 colors = [
