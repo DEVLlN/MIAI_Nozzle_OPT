@@ -7,11 +7,11 @@ import math
 max_events = -1
 
 # Gather input files
-fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/Hammer_V1/mumu_H_bb_100E_TIP_KZ_Hammer.slcio")
+fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/base/mumu_H_bb_100E_BH_BASE.slcio")
 
 # Set up histograms
 hists = {}
-hists["MCParticle_VertexMap_R_vs_Z_Hammer"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_Hammer", "MCParticle Vertex Map R vs Z Hammer", 50, -2600, 2600, 50, 0, 400)
+hists["MCParticle_VertexMap_R_vs_Z_Base"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_Base", "MCParticle Vertex Map R vs Z Base", 50, -2600, 2600, 50, 0, 400)
 
 # Loop over events
 event_count = 0
@@ -33,7 +33,7 @@ for f in fnames:
             vertex = p.getVertex()
             x, y, z = vertex[0], vertex[1], vertex[2]
             radius = math.sqrt(x**2 + y**2)
-            hists["MCParticle_VertexMap_R_vs_Z_Hammer"].Fill(z, radius)
+            hists["MCParticle_VertexMap_R_vs_Z_Base"].Fill(z, radius)
 
         event_count += 1
 

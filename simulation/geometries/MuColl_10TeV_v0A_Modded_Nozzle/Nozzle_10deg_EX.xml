@@ -19,42 +19,44 @@
             <comment>Internal part of the nozzle: Tungsten</comment>
             <material name="Tungsten"/>
             <zplane z="Nozzle_zmin" rmin="1*cm" rmax="1*cm"/>               <!-- 1. start tip -->
-            <zplane z="15*cm" rmin=" 2.49223*cm" rmax="2.59223*cm" />       <!-- 2. midway tip 4 cm delta -->
-            <zplane z="Nozzle_kink_z" rmin="13.53*cm" rmax="17.63*cm" />    <!-- 3. end of tip delta 0.1 cm delta -->
-            <zplane z="Nozzle_kink_z" rmin="11*cm" rmax="15*cm" />          <!-- 4. start of kink 4 cm delta -->
-            <zplane z="200*cm" rmin="13*cm" rmax="17*cm" />                 <!-- 5. end of kink & start of large nozzle 4 cm delta -->
-            <zplane z="600*cm" rmin="46*cm" rmax="50*cm" />                 <!-- 6. end of large cone 4 cm delta -->
+            <zplane z="15*cm" rmin=" 1.59223*cm" rmax="2.59223*cm" />       <!-- 2. midway tip 4 cm delta -->
+            <zplane z="Nozzle_kink_z" rmin="16.63*cm" rmax="17.63*cm" />    <!-- 3. end of tip delta 0.1 cm delta -->
+            <zplane z="Nozzle_kink_z" rmin="14*cm" rmax="15*cm" />          <!-- 4. start of kink 4 cm delta -->
+            <zplane z="200*cm" rmin="16*cm" rmax="17*cm" />                 <!-- 5. end of kink & start of large nozzle 4 cm delta -->
+            <zplane z="600*cm" rmin="49*cm" rmax="50*cm" />                 <!-- 6. end of large cone 4 cm delta -->
         </detector>
 
         <detector name="NozzleKillZone_right" type="DD4hep_PolyconeSupport" vis="NozzleKillZoneVis" region="NozzleRegion" limits="NozzleRegionLimitSet">
             <comment>Internal part of the nozzle: Kill zone</comment>
             <material name="Tungsten"/>
-            <zplane z="15*cm" rmin="0.6*cm" rmax="2.49223*cm" />            <!-- 2. midway tip -->
-            <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="13.53" />         <!-- 3. end of tip-->
-            <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="11*cm" />         <!-- 4. start of kink -->
-            <zplane z="200*cm" rmin="0.596*cm" rmax="13*cm" />              <!-- 5. end of kink & start of large nozzle -->
-            <zplane z="600*cm" rmin="1.78*cm" rmax="46*cm" />               <!-- 6. end of large cone -->
+            <zplane z="Nozzle_zmin" rmin="1*cm" rmax="1*cm"/>               <!-- 1. start tip -->            
+            <zplane z="15*cm" rmin="0.6*cm" rmax="1.59223*cm" />            <!-- 2. midway tip -->
+            <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="16.63" />         <!-- 3. end of tip-->
+            <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="14*cm" />         <!-- 4. start of kink -->
+            <zplane z="200*cm" rmin="0.596*cm" rmax="16*cm" />              <!-- 5. end of kink & start of large nozzle -->
+            <zplane z="600*cm" rmin="1.78*cm" rmax="49*cm" />               <!-- 6. end of large cone -->
         </detector>
 
         <detector name="NozzleW_left" type="DD4hep_PolyconeSupport" vis="NozzleWVis" region="NozzleRegion">
             <comment>Internal part of the nozzle: Tungsten</comment>
             <material name="Tungsten"/>
-            <zplane z="-Nozzle_zmin" rmin="1*cm" rmax="1*cm"/>              <!-- 1. start tip -->
-            <zplane z="-15*cm" rmin="2.49223*cm" rmax="2.59223*cm" />       <!-- 2. midway tip 0.1 cm delta -->
-            <zplane z="-Nozzle_kink_z" rmin="13.53*cm" rmax="17.63*cm" />   <!-- 3. end of tip delta 0.1 cm delta -->
-            <zplane z="-Nozzle_kink_z" rmin="11*cm" rmax="15*cm" />         <!-- 4. start of kink 1 cm delta -->
-            <zplane z="-200*cm" rmin="13*cm" rmax="17*cm" />                <!-- 5. end of kink & start of large nozzle 1 cm delta -->
-            <zplane z="-600*cm" rmin="46*cm" rmax="50*cm" />                <!-- 6. end of large cone 1 cm delta -->
+            <zplane z="-Nozzle_zmin" rmin="1*cm" rmax="1*cm"/>               <!-- 1. start tip -->
+            <zplane z="-15*cm" rmin=" 1.59223*cm" rmax="2.59223*cm" />       <!-- 2. midway tip 4 cm delta -->
+            <zplane z="-Nozzle_kink_z" rmin="16.63*cm" rmax="17.63*cm" />    <!-- 3. end of tip delta 0.1 cm delta -->
+            <zplane z="-Nozzle_kink_z" rmin="14*cm" rmax="15*cm" />          <!-- 4. start of kink 4 cm delta -->
+            <zplane z="-200*cm" rmin="16*cm" rmax="17*cm" />                 <!-- 5. end of kink & start of large nozzle 4 cm delta -->
+            <zplane z="-600*cm" rmin="49*cm" rmax="50*cm" />                 <!-- 6. end of large cone 4 cm delta -->
         </detector>
 
         <detector name="NozzleKillZone_left" type="DD4hep_PolyconeSupport" vis="NozzleKillZoneVis" region="NozzleRegion" limits="NozzleRegionLimitSet">
             <comment>Internal part of the nozzle: Kill zone</comment>
             <material name="Tungsten"/>
-            <zplane z="-15*cm" rmin="0.6*cm" rmax="2.49223*cm" />                <!-- 2. midway tip -->
-            <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="13.53" />             <!-- 3. end of tip-->
-            <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="11*cm" />             <!-- 4. start of kink -->
-            <zplane z="-200*cm" rmin="0.596*cm" rmax="13*cm" />                  <!-- 5. end of kink & start of large nozzle -->
-            <zplane z="-600*cm" rmin="1.78*cm" rmax="46*cm" />                   <!-- 6. end of large cone -->
+            <zplane z="-Nozzle_zmin" rmin="1*cm" rmax="1*cm"/>               <!-- 1. start tip -->            
+            <zplane z="-15*cm" rmin="0.6*cm" rmax="1.59223*cm" />            <!-- 2. midway tip -->
+            <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="16.63" />         <!-- 3. end of tip-->
+            <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="14*cm" />         <!-- 4. start of kink -->
+            <zplane z="-200*cm" rmin="0.596*cm" rmax="16*cm" />              <!-- 5. end of kink & start of large nozzle -->
+            <zplane z="-600*cm" rmin="1.78*cm" rmax="49*cm" />               <!-- 6. end of large cone -->
         </detector>
 
         <detector name="NozzleBCH_right" type="DD4hep_PolyconeSupport" vis="NozzleBCHVis" region="NozzleRegion">
