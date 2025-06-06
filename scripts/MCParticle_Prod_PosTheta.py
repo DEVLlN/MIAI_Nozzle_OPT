@@ -9,7 +9,7 @@ max_events = -1
 # Gather input files
 fnames = [
     "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/NoBlackhole/mumu_H_bb_100E.slcio",
-    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/base/mumu_H_bb_100E_TIP_KZv1_4_base.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/base/mumu_H_bb_100E_BH_BASE.slcio",
     "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/full_BH/mumu_H_bb_100E_BLACKHOLE_NOZZLE.slcio"
 ]
 

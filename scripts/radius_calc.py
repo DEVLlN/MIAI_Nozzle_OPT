@@ -12,10 +12,10 @@ def interpolate_radius(z1, r1, z2, r2, z):
 z1 = 6  # Example starting z point in cm
 r1 = 1  # Radius at z1 in cm
 
-z2 = 100  # Example ending z point in cm
-r2 = 14 # Radius at z2 in cm
+z2 = 15  # Example ending z point in cm
+r2 = 0.6 # Radius at z2 in cm
 
-z = 99  # Intermediate z point where we want to calculate the radius
+z = 11.6525 # Intermediate z point where we want to calculate the radius
 
 radius = interpolate_radius(z1, r1, z2, r2, z)
 radius_at_z_minus_0_4 = interpolate_radius(z1, r1, z2, r2, z) - 0.4

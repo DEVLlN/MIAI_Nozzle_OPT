@@ -39,7 +39,7 @@
             <zplane z="-6.25*cm" rmin="1.02483*cm" rmax="R_inner" />
             <zplane z="-6*cm" rmin="1*cm" rmax="R_inner" />
             <zplane z="6*cm" rmin="1*cm" rmax="R_inner" />
-            <zplane z="6.25*cm" rmin="1.02483*cm" rmax="R_inner" />
+            <zplane z="6.25*cm" rmin="1.02483*cm" rmax="R_inner" /> <!-- R_inner = 2.2 cm-->
             <zplane z="13.23*cm" rmin="2.281*cm" rmax="2.281*cm" />
         </detector>
         

@@ -11,13 +11,13 @@
     </display>
     
     
-    <detectors>
+    <detectors> 
         <comment>Nozzle</comment>
         
         <detector name="NozzleW_right" type="DD4hep_PolyconeSupport" vis="NozzleWVis" region="NozzleRegion">
             <comment>Internal part of the nozzle: Tungsten</comment>
             <material name="Tungsten"/>
-            <zplane z="Nozzle_zmin" rmin="1*cm" rmax="1*cm" />
+            <zplane z="Nozzle_zmin" rmin="1*cm" rmax="1*cm" /> <!-- Nozzle_zmin = 6cm-->
             <zplane z="15*cm" rmin="0.6*cm" rmax="2.59223*cm" />
             <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="17.63*cm" />
             <zplane z="Nozzle_kink_z" rmin="0.3*cm" rmax="15*cm" />
@@ -29,7 +29,7 @@
         <detector name="NozzleW_left" type="DD4hep_PolyconeSupport" vis="NozzleWVis" region="NozzleRegion">
             <comment>Internal part of the nozzle: Tungsten</comment>
             <material name="Tungsten"/>
-            <zplane z="-Nozzle_zmin" rmin="1*cm" rmax="1*cm" />
+            <zplane z="-Nozzle_zmin" rmin="1*cm" rmax="1*cm" /> 
             <zplane z="-15*cm" rmin="0.6*cm" rmax="2.59223*cm" />
             <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="17.63*cm" />
             <zplane z="-Nozzle_kink_z" rmin="0.3*cm" rmax="15*cm" />
