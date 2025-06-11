@@ -163,7 +163,6 @@
         <limitset name="cal_limits">
             <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
         </limitset>
-
         <limitset name="NozzleRegionLimitSet">
 			<limit name="track_length_max" particles="*" value="0.01" unit="mm"/>     <!-- Added Limit for track length -->
 		</limitset>

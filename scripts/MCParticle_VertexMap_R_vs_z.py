@@ -7,11 +7,11 @@ import math
 max_events = -1
 
 # Gather input files
-fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/NoBlackhole/mumu_H_bb_100E.slcio")
+fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/MAIA_v0/default_geometry/mumu_H_bb_100E_MAIA.slcio")
 
 # Set up histograms
 hists = {}
-hists["MCParticle_VertexMap_R_vs_Z_NoBlackHole"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_NoBlackHole", "MCParticle Vertex Map R vs Z No Black Hole", 50, -2600, 2600, 50, 0, 400)
+hists["MCParticle_VertexMap_R_vs_Z_MAIA"] = ROOT.TH2F("MCParticle_VertexMap_R_vs_Z_MAIA", "MCParticle Vertex Map R vs Z of Default MAIA Geometry", 50, -2600, 2600, 50, 0, 400)
 
 # Loop over events
 event_count = 0
@@ -33,7 +33,7 @@ for f in fnames:
             vertex = p.getVertex()
             x, y, z = vertex[0], vertex[1], vertex[2]
             radius = math.sqrt(x**2 + y**2)
-            hists["MCParticle_VertexMap_R_vs_Z_NoBlackHole"].Fill(z, radius)
+            hists["MCParticle_VertexMap_R_vs_Z_MAIA"].Fill(z, radius)
 
         event_count += 1
 
