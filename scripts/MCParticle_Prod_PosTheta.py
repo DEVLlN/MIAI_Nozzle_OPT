@@ -8,18 +8,72 @@ max_events = -1
 
 # Gather input files
 fnames = [
-    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/NoBlackhole/mumu_H_bb_100E.slcio",
-    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/base/mumu_H_bb_100E_BH_BASE.slcio",
-    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/full_BH/mumu_H_bb_100E_BLACKHOLE_NOZZLE.slcio"
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0/mumu_H_bb_100E_MAIA.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus0/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus0.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus10.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus20/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus20.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus30/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus30.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus40/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus40.slcio",
+
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z32.6382_rmaxMinus0/mumu_H_bb_100E_MAIA_nozzle_z32.6382_rmaxMinus0.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z32.6382_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z32.6382_rmaxMinus10.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z32.6382_rmaxMinus20/mumu_H_bb_100E_MAIA_nozzle_z32.6382_rmaxMinus20.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z32.6382_rmaxMinus30/mumu_H_bb_100E_MAIA_nozzle_z32.6382_rmaxMinus30.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z32.6382_rmaxMinus40/mumu_H_bb_100E_MAIA_nozzle_z32.6382_rmaxMinus40.slcio",
+
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z54.7588_rmaxMinus0/mumu_H_bb_100E_MAIA_nozzle_z54.7588_rmaxMinus0.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z54.7588_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z54.7588_rmaxMinus10.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z54.7588_rmaxMinus20/mumu_H_bb_100E_MAIA_nozzle_z54.7588_rmaxMinus20.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z54.7588_rmaxMinus30/mumu_H_bb_100E_MAIA_nozzle_z54.7588_rmaxMinus30.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z54.7588_rmaxMinus40/mumu_H_bb_100E_MAIA_nozzle_z54.7588_rmaxMinus40.slcio",
+
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z76.8794_rmaxMinus0/mumu_H_bb_100E_MAIA_nozzle_z76.8794_rmaxMinus0.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z76.8794_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z76.8794_rmaxMinus10.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z76.8794_rmaxMinus20/mumu_H_bb_100E_MAIA_nozzle_z76.8794_rmaxMinus20.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z76.8794_rmaxMinus30/mumu_H_bb_100E_MAIA_nozzle_z76.8794_rmaxMinus30.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z76.8794_rmaxMinus40/mumu_H_bb_100E_MAIA_nozzle_z76.8794_rmaxMinus40.slcio",
+
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z99.0_rmaxMinus0/mumu_H_bb_100E_MAIA_nozzle_z99.0_rmaxMinus0.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z99.0_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z99.0_rmaxMinus10.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z99.0_rmaxMinus20/mumu_H_bb_100E_MAIA_nozzle_z99.0_rmaxMinus20.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z99.0_rmaxMinus30/mumu_H_bb_100E_MAIA_nozzle_z99.0_rmaxMinus30.slcio",
+    "/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z99.0_rmaxMinus40/mumu_H_bb_100E_MAIA_nozzle_z99.0_rmaxMinus40.slcio"
 ]
 
-# Descriptive names for each file
+# Descriptive names for each filels cb
 descriptive_names = [
-    "Default Geometry",
-    "Simple Blackhole Geometry",
-    "Full Nozzle Blackhole"
-]
+    "No Blackhole",
+    "Skindepth 1 cm, Nozzle Cutoff 10.5176 cm",
+    "Skindepth 10 cm, Nozzle Cutoff 10.5176 cm",
+    "Skindepth 20 cm, Nozzle Cutoff 10.5176 cm"
+    "Skindepth 30 cm, Nozzle Cutoff 10.5176 cm",
+    "Skindepth 40 cm, Nozzle Cutoff 10.5176 cm",
 
+    "Skindepth 1 cm, Nozzle Cutoff 32.6382 cm",
+    "Skindepth 10 cm, Nozzle Cutoff 32.6382 cm",
+    "Skindepth 20 cm, Nozzle Cutoff 32.6382 cm",
+    "Skindepth 30 cm, Nozzle Cutoff 32.6382 cm",
+    "Skindepth 40 cm, Nozzle Cutoff 32.6382 cm",
+
+    "Skindepth 1 cm, Nozzle Cutoff 54.7588 cm",
+    "Skindepth 10 cm, Nozzle Cutoff 54.7588 cm",
+    "Skindepth 20 cm, Nozzle Cutoff 54.7588 cm",
+    "Skindepth 30 cm, Nozzle Cutoff 54.7588 cm",
+    "Skindepth 40 cm, Nozzle Cutoff 54.7588 cm",
+
+    "Skindepth 1 cm, Nozzle Cutoff 76.8794 cm",
+    "Skindepth 10 cm, Nozzle Cutoff 76.8794 cm",
+    "Skindepth 20 cm, Nozzle Cutoff 76.8794 cm",
+    "Skindepth 30 cm, Nozzle Cutoff 76.8794 cm",
+    "Skindepth 40 cm, Nozzle Cutoff 76.8794 cm",
+
+    "Skindepth 1 cm, Nozzle Cutoff 99.0 cm",
+    "Skindepth 10 cm, Nozzle Cutoff 99.0 cm",
+    "Skindepth 20 cm, Nozzle Cutoff 99.0 cm",
+    "Skindepth 30 cm, Nozzle Cutoff 99.0 cm",
+    "Skindepth 40 cm, Nozzle Cutoff 99.0 cm"
+]
+ 
 # Set up histograms
 hists = {}
 colors = [ROOT.kRed, ROOT.kGreen+1, ROOT.kBlue+1]
@@ -92,7 +146,7 @@ legend.Draw()
 
 # Add title to the canvas
 title = ROOT.TPaveText(0.2, 0.92, 0.8, 0.98, "NDC")
-title.AddText("MCParticle Position Theta at Different Nozzle Blackholes")
+title.AddText("MCParticle Position Theta at Different Nozzle Blackhole Volumes")
 title.SetFillColor(0)
 title.SetBorderSize(0)
 title.SetFillColor(0)
@@ -100,4 +154,4 @@ title.SetTextAlign(22)  # Center alignment
 title.SetTextSize(0.04)
 title.Draw()
 
-c.SaveAs("MCParticle_Pos_Theta.png")
+c.SaveAs("MCParticle_Pos_Theta_v1.png")

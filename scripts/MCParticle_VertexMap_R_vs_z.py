@@ -7,7 +7,7 @@ import math
 max_events = -1
 
 # Gather input files
-fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/mumu_H_bb_100Events/MAIA_v0/default_geometry/mumu_H_bb_100E_MAIA.slcio")
+fnames = glob.glob("/home/devlinjenkins/projects/NozzleSimOpti/simulation/geometries/MAIA_v0_Blackhole/nozzle_varients/nozzle_z10.5176_rmaxMinus10/mumu_H_bb_100E_MAIA_nozzle_z10.5176_rmaxMinus10.slcio")
 
 # Set up histograms
 hists = {}
